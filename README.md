@@ -3,13 +3,22 @@ homebrew-tap
 
 linux_china's Homebrew Tap
 
-### how to use
+# how to use?
 
 ```
-brew install linux_china/tap/xxxx 
+brew tap linux-china/tap
 ```
 
-### Tools
+# Tools
+
+### maven-toolchains-cli
+
+Please refer https://github.com/linux-china/maven-toolchains-cli
+
+```shell script
+brew install maven-toolchains-cli
+# brew install linux-china/tap/maven-toolchains-cli
+```
 
 ### References
 
