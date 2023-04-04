@@ -5,7 +5,7 @@ linux_china's Homebrew Tap
 
 # how to use?
 
-```
+```shell
 brew tap linux-china/tap
 ```
 
@@ -15,9 +15,8 @@ brew tap linux-china/tap
 
 Please refer https://github.com/linux-china/maven-toolchains-cli
 
-```shell script
+```shell
 brew install maven-toolchains-cli
-# brew install linux-china/tap/maven-toolchains-cli
 ```
 
 ### References
