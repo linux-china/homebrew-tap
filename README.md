@@ -16,12 +16,7 @@ brew tap linux-china/tap
 Please refer https://github.com/linux-china/zawk
 
 ```shell
-brew install --no-quarantine zawk
-```
-
-or
-
-```shell
+$ brew install --no-quarantine zawk
 $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix zawk))/bin/zawk
 ```
 
@@ -30,7 +25,7 @@ $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix zawk))/bin
 Please refer https://github.com/linux-china/maven-toolchains-cli
 
 ```shell
-brew install --no-quarantine maven-toolchains-cli
+$ brew install --no-quarantine maven-toolchains-cli
 ```
 
 ### References
