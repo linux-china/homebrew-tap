@@ -5,12 +5,12 @@ class Zawk < Formula
     license 'Apache-2.0'
 
     if OS.mac? && Hardware::CPU.intel?
-      url 'https://github.com/linux-china/zawk/releases/download/v0.5.0/zawk-0.5.0-x86_64-apple-darwin.tar'
-      sha256 'e0043249bcb77b390315a2b6b729b673884cf4c038573c9924f23c40fdc89af7'
+      url 'https://github.com/linux-china/zawk/releases/download/v0.5.2/zawk-0.5.2-x86_64-apple-darwin.tar'
+      sha256 '0d3423eca75854d6a6afc21ac03f06ee7d0b9a5c85292a417a4cfc207126d08d'
     end
     if OS.mac? && Hardware::CPU.arm?
-      url 'https://github.com/linux-china/zawk/releases/download/v0.5.0/zawk-0.5.0-aarch64-apple-darwin.tar'
-      sha256 '78626c2881a2fe3920a7666367350c82fb62a738ec08c29ef745b41b62435b81'
+      url 'https://github.com/linux-china/zawk/releases/download/v0.5.2/zawk-0.5.2-aarch64-apple-darwin.tar'
+      sha256 '5f4c767aa3f25d160ac9267fef9a52969b2aaf0493f2c98128b3ffe4cd629a9e'
     end
 
     def install
