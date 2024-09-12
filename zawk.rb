@@ -1,16 +1,16 @@
 class Zawk < Formula
     desc 'zawk - An efficient awk-like language by Rust with stdlib support'
     homepage 'https://github.com/linux-china/zawk'
-    version '0.5.13'
+    version '0.5.15'
     license 'Apache-2.0'
 
     if OS.mac? && Hardware::CPU.intel?
-      url 'https://github.com/linux-china/zawk/releases/download/v0.5.13/zawk-0.5.13-x86_64-apple-darwin.tar'
-      sha256 '51872a2bc5c9e094c856abab62bc62e71c1c2828c1d3cd0c26b2a3631d607a55'
+      url 'https://github.com/linux-china/zawk/releases/download/v0.5.15/zawk-0.5.15-x86_64-apple-darwin.tar'
+      sha256 '4beb19047ba176734463582e6467ee00e7ab37c481defc2a736a97e61307277a'
     end
     if OS.mac? && Hardware::CPU.arm?
-      url 'https://github.com/linux-china/zawk/releases/download/v0.5.13/zawk-0.5.13-aarch64-apple-darwin.tar'
-      sha256 'e7c9c8be24612b77d70a092dd06f2984ca6fb0a6b2c32fb2e1afc2f405706124'
+      url 'https://github.com/linux-china/zawk/releases/download/v0.5.15/zawk-0.5.15-aarch64-apple-darwin.tar'
+      sha256 '1204148230243e516c8c57f548c674ab9fb9cba2de58e887aea83d484b5e304d'
     end
 
     def install
