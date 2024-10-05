@@ -17,7 +17,16 @@ Please refer https://github.com/linux-china/zawk
 
 ```shell
 $ brew install --no-quarantine zawk
-$ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix zawk))/bin/zawk
+$ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix zawk))
+```
+
+### task-keeper
+
+Please refer https://github.com/linux-china/task-keeper
+
+```shell
+$ brew install --no-quarantine task-keeper
+$ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix task-keeper))
 ```
 
 ### maven-toolchains-cli
