@@ -1,21 +1,21 @@
 class TaskKeeper < Formula
   desc "Task keeper to manage tasks from different task runners"
   homepage "https://github.com/linux-china/task-keeper"
-  version "0.24.2"
+  version "0.25.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.24.2/task-keeper-aarch64-apple-darwin.tar.xz"
-      sha256 "c137ed255504b97af0beb94933b4a612122cb0c83bcc3a1267de9d09629c1ecf"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.25.0/task-keeper-aarch64-apple-darwin.tar.xz"
+      sha256 "e1cb8881aad025569d3a5cbe08bb74bceb5464cf4debbc457845059d4127f1e7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.24.2/task-keeper-x86_64-apple-darwin.tar.xz"
-      sha256 "6db81566a2b2db92516f6bfc2e1a8eb1cc9305bb0162fb553c7d7d6f9a5da390"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.25.0/task-keeper-x86_64-apple-darwin.tar.xz"
+      sha256 "dad25f67cf2475fdac83a6e23f125d769550ad3516ffa2f3d32b28a979dac766"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.24.2/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "097cac6c75dfc0e3ca2a84f7542eec9c4b5f910af6819eed6dd7ab69b7060e34"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.25.0/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "25a7a363887ce4357bab9676aba0a79bde02174f253f779a3587f73c0cda8389"
     end
   end
   license "Apache-2.0"
@@ -44,13 +44,13 @@ class TaskKeeper < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "tk"
+      bin.install "sq", "tk"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "tk"
+      bin.install "sq", "tk"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "tk"
+      bin.install "sq", "tk"
     end
 
     install_binary_aliases!
