@@ -1,25 +1,25 @@
 class DotenvxRs < Formula
   desc "Dotenvx is a Rust command-line/library to encrypt your .env files - limiting their attack vector while retaining their benefits"
   homepage "https://github.com/linux-china/dotenvx-rs"
-  version "0.3.2"
+  version "0.4.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.3.2/dotenvx-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "4ab58f78fee1f45fe29e0a4f7052af7dec77d75f2e086f4ef43193ced97d91f9"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.2/dotenvx-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "1982e84e1eb42e436c09c0aeaefffbabb496785b8af0a36ff3d9976d0f5e5ef5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.3.2/dotenvx-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "cd223c7e50bed796d2b8c46638d35272c1c1ebd111ef717ccf72471512bd988a"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.2/dotenvx-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "27625d1e9214f44fb87264c35e61d7b1319bb175055f5a92ed087d8dca172b10"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.3.2/dotenvx-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "89a1adee27b5c8867588dd3db2b26a45a29bd778a1cc01d20296e254844259d4"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.2/dotenvx-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ad8025faa40b521c95cb154d984286d5511111531ac1ddbab08bc92a00c8dc83"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.3.2/dotenvx-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "69415b408c9444cb6196e2cf62121e0f85525bda269fb2990d212d2b7ba656f2"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.2/dotenvx-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "3a11de95a1f95ea8777888933f1b34b17ee5888c702d6ceae97c429f432f15f6"
     end
   end
   license "MIT"
@@ -49,16 +49,16 @@ class DotenvxRs < Formula
 
   def install
     if OS.mac? && Hardware::CPU.arm?
-      bin.install "dotenvx"
+      bin.install "dotenvx", "mkey"
     end
     if OS.mac? && Hardware::CPU.intel?
-      bin.install "dotenvx"
+      bin.install "dotenvx", "mkey"
     end
     if OS.linux? && Hardware::CPU.arm?
-      bin.install "dotenvx"
+      bin.install "dotenvx", "mkey"
     end
     if OS.linux? && Hardware::CPU.intel?
-      bin.install "dotenvx"
+      bin.install "dotenvx", "mkey"
     end
 
     install_binary_aliases!
