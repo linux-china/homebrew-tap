@@ -1,25 +1,25 @@
 class DotenvxRs < Formula
   desc "Dotenvx is a Rust command-line/library to encrypt your .env files - limiting their attack vector while retaining their benefits"
   homepage "https://github.com/linux-china/dotenvx-rs"
-  version "0.4.22"
+  version "0.4.23"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.22/dotenvx-rs-aarch64-apple-darwin.tar.xz"
-      sha256 "d86172bfe3794809141110d3f372baa43fa9e8ce7e63bb76a71d21bd0a79d568"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.23/dotenvx-rs-aarch64-apple-darwin.tar.xz"
+      sha256 "8e9bfba2a6624fcbacc37809d0fd6c35141a97a20e955dc85e498dc7cff2ae8c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.22/dotenvx-rs-x86_64-apple-darwin.tar.xz"
-      sha256 "1557c846855ec82deb684ad14c3daf20d095f75b4a62180d52be672fd5180522"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.23/dotenvx-rs-x86_64-apple-darwin.tar.xz"
+      sha256 "1c6d6390742fe7ad9b8e97caac686b26e6daab807669e2c6b58359b453adeb63"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.22/dotenvx-rs-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0336deee9f588f80ea88460459118bde3c3a382c40a828a0750b26cd2ebe741f"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.23/dotenvx-rs-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e8099a97f9c70f3b521dc921944e2f06292fc47fadabd06e7e9a5cc3a872f109"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.22/dotenvx-rs-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ce423398bcffd5cf2b465aa506fe37e2d46352ebbbb40b5b4f4892e2396370f1"
+      url "https://github.com/linux-china/dotenvx-rs/releases/download/v0.4.23/dotenvx-rs-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "12fafc67bea658f951cb8dd48cfc578d1e68ac0f0ffb58cf818e7200049a14a9"
     end
   end
   license "MIT"
