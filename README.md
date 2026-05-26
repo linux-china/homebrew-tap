@@ -16,7 +16,7 @@ brew tap linux-china/tap
 Please refer https://github.com/linux-china/task-keeper
 
 ```shell
-$ brew install --no-quarantine task-keeper
+$ brew install task-keeper
 $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix task-keeper))
 ```
 
@@ -25,7 +25,7 @@ $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix task-keepe
 Please refer https://github.com/linux-china/dotenvx-rs
 
 ```shell
-$ brew install --no-quarantine dotenvx-rs
+$ brew install dotenvx-rs
 $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix dotenvx-rs))
 ```
 
@@ -34,7 +34,7 @@ $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix dotenvx-rs
 Please refer https://github.com/linux-china/duckman
 
 ```shell
-$ brew install --no-quarantine duckman
+$ brew install duckman
 $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix duckman))
 ```
 
@@ -44,7 +44,7 @@ $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix duckman))
 Please refer https://github.com/linux-china/maven-toolchains-cli
 
 ```shell
-$ brew install --no-quarantine maven-toolchains-cli
+$ brew install maven-toolchains-cli
 ```
 
 ### zawk
@@ -52,7 +52,7 @@ $ brew install --no-quarantine maven-toolchains-cli
 Please refer https://github.com/linux-china/zawk
 
 ```shell
-$ brew install --no-quarantine zawk
+$ brew install zawk
 $ sudo xattr -r -d com.apple.quarantine $(readlink -f $(brew --prefix zawk))
 ```
 
