@@ -1,30 +1,37 @@
 class TaskKeeper < Formula
   desc "Task keeper to manage tasks from different task runners"
   homepage "https://github.com/linux-china/task-keeper"
-  version "0.34.0"
+  version "0.35.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.34.0/task-keeper-aarch64-apple-darwin.tar.xz"
-      sha256 "bc40f083d95746d1f6c903ad4b1d14025e130f5386fe79571ba60e9268de2388"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-aarch64-apple-darwin.tar.xz"
+      sha256 "62067c9354f279dd5ac123669eec2632e3af933b5993b7398164931d260ced36"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.34.0/task-keeper-x86_64-apple-darwin.tar.xz"
-      sha256 "8b161ea42e313c23611a346ee1301a9d15c2a30053901d4b3afbd62218043e7c"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-x86_64-apple-darwin.tar.xz"
+      sha256 "f64df79702af9a0e0ab030ab6379a9ec21b70dd22f4dc52a9e8d768dd776d288"
     end
   end
   if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "71a27747eece9a416b9c250d969107c894518b20b46e0fa5ae0022f0b7e48124"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.34.0/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "d2f9da83aef3886c4cc05de94ba3ee35b317de540dad13b2d5bfce28a94eb617"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "04c98945dfd4e8adcccd0a5ec04bdde4cc08983f86cc133d647fa4484b8513f0"
     end
   end
   license "Apache-2.0"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin": {},
     "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
   }
 
   def target_triple
@@ -47,6 +54,9 @@ class TaskKeeper < Formula
       bin.install "sq", "tk"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "sq", "tk"
+    end
+    if OS.linux? && Hardware::CPU.arm?
       bin.install "sq", "tk"
     end
     if OS.linux? && Hardware::CPU.intel?
