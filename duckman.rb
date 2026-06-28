@@ -1,25 +1,25 @@
 class Duckman < Formula
   desc "duckman - a DuckDB version manager and toolchain CLI"
   homepage "https://github.com/linux-china/duckman"
-  version "0.1.4"
+  version "0.1.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/duckman/releases/download/v0.1.4/duckman-aarch64-apple-darwin.tar.xz"
-      sha256 "82eb72ef4e35fc1a91d1cdfcb148a9be166ae0b0e087f1c3dc2445fd3270e844"
+      url "https://github.com/linux-china/duckman/releases/download/v0.1.6/duckman-aarch64-apple-darwin.tar.xz"
+      sha256 "b50ea74c8dc25e340b8368fe31a749190b7b2c4a84f8c2ddfd55dda3520bf87f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/duckman/releases/download/v0.1.4/duckman-x86_64-apple-darwin.tar.xz"
-      sha256 "5f910ab42e6f4d991769c5b81b35f27373ad163293ae2c6d2dc937775a8791e7"
+      url "https://github.com/linux-china/duckman/releases/download/v0.1.6/duckman-x86_64-apple-darwin.tar.xz"
+      sha256 "62b81b9f9f5f346a21cf6cf7a83d301665e35f2a48c307996e738f7f5206f63e"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/duckman/releases/download/v0.1.4/duckman-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7e18d3bf1d45cbfabbcf9561ade87394b21f649a9b1ba92ce51133a09edd2947"
+      url "https://github.com/linux-china/duckman/releases/download/v0.1.6/duckman-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "e36284eb0620ac49648b30668f45dfbdf25a8eba719e4dcb0276a14f8544217a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/duckman/releases/download/v0.1.4/duckman-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "dbb8121fcaaaff0084867bcdcb74e4237daf661ac637aca7181dce8a69b45070"
+      url "https://github.com/linux-china/duckman/releases/download/v0.1.6/duckman-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "19c0c8d4b511c228392e425a1d461ba2df7a8fbfd861489da918036aa70d6a99"
     end
   end
   license "MIT"
