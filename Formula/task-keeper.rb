@@ -1,25 +1,25 @@
 class TaskKeeper < Formula
   desc "Task keeper to manage tasks from different task runners"
   homepage "https://github.com/linux-china/task-keeper"
-  version "0.35.2"
+  version "0.35.6"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-aarch64-apple-darwin.tar.xz"
-      sha256 "62067c9354f279dd5ac123669eec2632e3af933b5993b7398164931d260ced36"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.6/task-keeper-aarch64-apple-darwin.tar.xz"
+      sha256 "ec650b7c3eb044484ac9e4b8aa6843610d464ac5ab420c2e5971493e3cf458de"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-x86_64-apple-darwin.tar.xz"
-      sha256 "f64df79702af9a0e0ab030ab6379a9ec21b70dd22f4dc52a9e8d768dd776d288"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.6/task-keeper-x86_64-apple-darwin.tar.xz"
+      sha256 "9a37b7c232668b3cedb46dfc2ec7436707bdc540b5e58482ade699451dd3f8b4"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "71a27747eece9a416b9c250d969107c894518b20b46e0fa5ae0022f0b7e48124"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.6/task-keeper-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "8cbb57efd8c6c758e5884ad7e42d39d4064358e4a138563345fa2579f4aca74e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.2/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "04c98945dfd4e8adcccd0a5ec04bdde4cc08983f86cc133d647fa4484b8513f0"
+      url "https://github.com/linux-china/task-keeper/releases/download/v0.35.6/task-keeper-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "066642efde51f39e5b304c11f6bde58ceb74b8e2d9d01d63e47183a2c9d7f257"
     end
   end
   license "Apache-2.0"
