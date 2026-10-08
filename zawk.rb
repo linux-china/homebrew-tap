@@ -1,29 +1,32 @@
 class Zawk < Formula
   desc "An efficient Awk-like language implementation by Rust with stdlib"
   homepage "https://github.com/linux-china/zawk"
-  version "0.5.22"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/zawk/releases/download/v0.5.22/zawk-aarch64-apple-darwin.tar.xz"
-      sha256 "fdf3fa3edbaa962c97a8e3b066596c6764e9923f7f7ee26417fe7aa2aad7cbc7"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.0/zawk-aarch64-apple-darwin.tar.xz"
+      sha256 "e69345ac34aebac36db58150641c5884799b4ad809c3aeb92d890f377d6c1b26"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.5.22/zawk-x86_64-apple-darwin.tar.xz"
-      sha256 "6f18b94b30026ecef96f3c74df4b23f121e937bc849ee05b1003bec0bec02efa"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.0/zawk-x86_64-apple-darwin.tar.xz"
+      sha256 "8d8e9827d5fb9db1c0b58f3e766ff1dc55ead56426f788b8fdff1a010c77bdb9"
     end
   end
   if OS.linux?
+    if Hardware::CPU.arm?
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.0/zawk-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c5ccbfff0293a4eed37281d2b2e1ea19e1aa2431c9c30f47684e4342ed765b68"
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.5.22/zawk-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "f60cac63707daf1213460954680425ee715cd3aa7e5cfef25bb8d2b356ca1782"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.0/zawk-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d4dcf597a16d1b47480925c6a7c3854f14af524844403d08983194bde0178083"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
 
-  depends_on "xz"
-
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
+    "aarch64-unknown-linux-gnu": {},
     "x86_64-apple-darwin": {},
     "x86_64-pc-windows-gnu": {},
     "x86_64-unknown-linux-gnu": {}
@@ -49,6 +52,9 @@ class Zawk < Formula
       bin.install "zawk"
     end
     if OS.mac? && Hardware::CPU.intel?
+      bin.install "zawk"
+    end
+    if OS.linux? && Hardware::CPU.arm?
       bin.install "zawk"
     end
     if OS.linux? && Hardware::CPU.intel?
