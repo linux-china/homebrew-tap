@@ -1,25 +1,25 @@
 class Zawk < Formula
   desc "An efficient Awk-like language implementation by Rust with stdlib"
   homepage "https://github.com/linux-china/zawk"
-  version "0.6.4"
+  version "0.6.5"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.4/zawk-aarch64-apple-darwin.tar.xz"
-      sha256 "ce38ed211bd6372013a591dcf78d2b82834dd8149e783a585a9f9d4753732086"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.5/zawk-aarch64-apple-darwin.tar.xz"
+      sha256 "aeb6fa57c0663159b6c2ac80310758c4153df45bb1bd3ca27f0b030958ecbdca"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.4/zawk-x86_64-apple-darwin.tar.xz"
-      sha256 "6320dc6120e6067f0bda5dcc5195ecd02d05b3751ee5b50b0dee64b7f2f14dc3"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.5/zawk-x86_64-apple-darwin.tar.xz"
+      sha256 "1f96c26e930b9f41b7e38ed50f199b292567a0f5590be18f53f10c37e2ad450a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.4/zawk-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "22d6bd0214153dd2aaed54741840b11530b799175c293d689f595cf299dce6bd"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.5/zawk-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "47ef400901bcef2074e4cf4909997b279f4f89ec7d28df16a3e83a387ef00dfc"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.4/zawk-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "b94c5a198ea4ab33b17317f2e11b5291ee3910135acad83c71aaf365d97bc45c"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.5/zawk-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "da920eedf89a555ab38f4b656ecd3ff96a56d571aaaa11266402498bdf0f78f2"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
