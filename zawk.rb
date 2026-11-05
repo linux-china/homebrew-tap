@@ -1,25 +1,25 @@
 class Zawk < Formula
   desc "An efficient Awk-like language implementation by Rust with stdlib"
   homepage "https://github.com/linux-china/zawk"
-  version "0.6.7"
+  version "0.6.8"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.7/zawk-aarch64-apple-darwin.tar.xz"
-      sha256 "9a35aaff0a5647a5640f46eb8d8c2ace698f985d8a8ff6943f29796cdbf8a847"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.8/zawk-aarch64-apple-darwin.tar.xz"
+      sha256 "acdfe5ffa01eb549598da07a79a80c131cf101c54412fadd4e8acee92524b4b7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.7/zawk-x86_64-apple-darwin.tar.xz"
-      sha256 "4c7efcba3f2a6b94ef8c59d2e9ed61d4e9d6a48e75e99c7424616a827008b054"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.8/zawk-x86_64-apple-darwin.tar.xz"
+      sha256 "5594f29b94eb9e8b9f1d0e992551deffd1f9b2dc2e702274aea5b678a000d8e2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.7/zawk-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b6dff94aaee71e912c4512f5944b770b6d8735ecc1f4835336b22a00a66369ba"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.8/zawk-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "ca251af413199c9608625572f4f52d13ef2b34c4fb91fb3b4321cb0ad29dd0ca"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/linux-china/zawk/releases/download/v0.6.7/zawk-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ea319be324f854e9b12aef77e18c5137553552ed7732afd4f5d669eee074d5f8"
+      url "https://github.com/linux-china/zawk/releases/download/v0.6.8/zawk-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "ad772ddda750b09815ceec7239ab726922aeac760b771cf9c91af772dbe56877"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -27,9 +27,13 @@ class Zawk < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin": {},
     "aarch64-unknown-linux-gnu": {},
+    "aarch64-unknown-linux-musl-dynamic": {},
+    "aarch64-unknown-linux-musl-static": {},
     "x86_64-apple-darwin": {},
     "x86_64-pc-windows-gnu": {},
-    "x86_64-unknown-linux-gnu": {}
+    "x86_64-unknown-linux-gnu": {},
+    "x86_64-unknown-linux-musl-dynamic": {},
+    "x86_64-unknown-linux-musl-static": {}
   }
 
   def target_triple
